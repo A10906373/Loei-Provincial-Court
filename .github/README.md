@@ -81,3 +81,120 @@ Removing images from websites (so-called “text-only versions”) make them les
 {:/}
 # https://github.com/B38834-24-0448?tab=repositories
 # https://github.com/B38834-24-0448
+# Viewing contributions on your profile
+
+You can see a history of your contributions on your profile.
+
+## Prerequisites
+
+Before you view contributions on your profile, you should understand what counts as a contribution, and what other information your profile displays. See [Contributions on your profile](/en/account-and-profile/concepts/contributions-on-your-profile).
+
+## Viewing contributions in a specific time range
+
+1. In the upper-right corner of any page, click your profile picture, then click **Your profile**.
+
+2. To see a visual representation of your contributions, scroll down to the section labeled "NUMBER contributions in the last year".
+
+   > \[!NOTE]
+   > Commits will only appear on your contributions calendar if the email address you used to author the commits is connected to your GitHub account. For more information, see [Troubleshooting missing contributions](/en/account-and-profile/how-tos/contribution-settings/troubleshooting-missing-contributions#your-local-git-commit-email-isnt-connected-to-your-account)
+
+3. To view contributions made on a specific day, click the square corresponding to that day.
+
+4. To view contributions made over a specific time span, click the square corresponding to the start of the time span, press <kbd>Shift</kbd>, then click the square corresponding to the end of the time span.
+
+   > \[!NOTE]
+   > You can select up to a one-month range on your contributions calendar. If you select a larger time span, we will only display one month of contributions.
+
+## Viewing a timeline of your contributions
+
+1. In the upper-right corner of any page, click your profile picture, then click **Your profile**.
+2. To see a timeline of your contributions, starting with your most recent work, scroll down to the "Contribution activity" section of the page.
+3. Optionally, to explore older contributions:
+   * At the bottom of the timeline, click **Show more activity**.
+   * On the right side of the page, click the year you want to see contributions from.
+
+## Next steps
+
+To learn more about what counts as a contribution, see [Troubleshooting missing contributions](/en/account-and-profile/how-tos/contribution-settings/troubleshooting-missing-contributions)
+
+If you use GitHub Enterprise Server and your enterprise owner enables unified contributions, you can send enterprise contribution counts to your GitHub.com profile. See [Sharing contributions from GitHub Enterprise Server](/en/account-and-profile/how-tos/contribution-settings/sharing-contributions-from-github-enterprise-server).
+
+# Troubleshooting missing contributions
+
+Learn common reasons that contributions may be missing from your contributions graph.
+
+## Commit was made less than 24 hours ago
+
+After making a commit that meets the requirements to count as a contribution, you may need to wait for up to 24 hours to see the contribution appear on your contributions graph. For more information, see [Viewing commit details from your timeline](/en/account-and-profile/how-tos/contribution-settings/viewing-commit-details-from-your-timeline).
+
+## Your local Git commit email isn't connected to your account
+
+Commits must be made with an email address that is connected to your account on GitHub, or the GitHub-provided `noreply` email address provided to you in your email settings, in order to appear on your contributions graph. For more information about `noreply` email addresses, see [Email addresses reference](/en/account-and-profile/reference/email-addresses-reference#your-noreply-email-address).
+
+You can check the email address used for a commit by adding `.patch` to the end of a commit URL. For example, the following commit URL includes `.patch`.
+
+<https://github.com/octocat/octocat.github.io/commit/67c0afc1da354d8571f51b6f0af8f2794117fd10.patch>
+
+```text
+From 67c0afc1da354d8571f51b6f0af8f2794117fd10 Mon Sep 17 00:00:00 2001
+From: The Octocat <octocat@nowhere.com>
+Date: Sun, 27 Apr 2014 15:36:39 +0530
+Subject: [PATCH] updated index for better welcome message
+```
+
+The email address in the `From:` field is the address that was set in the [local git config settings](/en/get-started/git-basics/set-up-git). In this example, the email address used for the commit is `octocat@nowhere.com`.
+
+If the email address used for the commit is not connected to your account on GitHub, you must [add the email address](/en/account-and-profile/how-tos/email-preferences/adding-an-email-address-to-your-github-account) to your account on GitHub. Your contributions graph will be rebuilt automatically when you add the new address.
+
+If you remove an email address that was used to author older commits, or move that email to a different account, those historical contributions will no longer appear on your contributions graph. To restore attribution, add the exact historical commit email address back to your account. You do not need access to that mailbox. After adding or moving the email address, the contribution graph may take up to 24 hours to refresh. If qualifying contributions still have not returned after that time, confirm the commit author email using the `.patch` view described earlier in this article, then contact [GitHub Support](https://support.github.com) with that information.
+
+> \[!NOTE]
+> If you use a managed user account, you cannot add additional email addresses to the account, even if multiple email addresses are registered with your identity provider (IdP). Therefore, only commits that are authored by the primary email address registered with your IdP can be associated with your managed user account.
+
+Generic email addresses, such as `jane@computer.local`, cannot be added to GitHub accounts and linked to commits. If you've authored any commits using a generic email address, the commits will not be linked to your GitHub profile and will not show up in your contribution graph.
+
+## Commit was not made in the default or `gh-pages` branch
+
+Commits are only counted if they are made in the default branch or the `gh-pages` branch (for repositories with project sites). For more information, see [What is GitHub Pages?](/en/pages/getting-started-with-github-pages/what-is-github-pages#types-of-github-pages-sites).
+
+If your commits are in a non-default or non-`gh-pages` branch and you'd like them to count toward your contributions, you will need to do one of the following:
+
+* [Open a pull request](/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request) to have your changes merged into the default branch or the `gh-pages` branch.
+* [Change the default branch](/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/changing-the-default-branch) of the repository.
+
+> \[!WARNING]
+> Changing the default branch of the repository will change it for all repository collaborators. Only do this if you want the new branch to become the base against which all future pull requests and commits will be made.
+
+## Commit was made in a fork
+
+Commits made in a fork will not count toward your contributions. To make them count, you must open a pull request to have your changes merged into the parent repository. For more information, see [Creating a pull request](/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request).
+
+## Next steps
+
+* [Profile contributions reference](/en/account-and-profile/reference/profile-contributions-reference)
+* [Viewing contributions on your profile](/en/account-and-profile/how-tos/contribution-settings/viewing-contributions-on-your-profile)
+
+* จาก 67c0afc1da354d8571f51b6f0af8f2794117fd10 จันทร์ 17 ก.ย.00:00:00 2544
+จาก: Octocat <octocat@nowhere.com>
+วันที่: อาทิตย์ 27 เมษายน 2014 15:36:39 +0530
+เรื่อง: [PATCH] อัปเดตดัชนีสําหรับข้อความต้อนรับที่ดีขึ้น
+
+---
+ index.html | 4 ++--
+ เปลี่ยน 1 ไฟล์, แทรก 2 ครั้ง(+), ลบ 2 ครั้ง(-)
+
+diff --git a/index.html b/index.html
+ดัชนี 35a7409...4643085 100644
+--- a/index.html
++++ b/index.html
+@@ -18,8 +18,8 @@
+         <คลาสส่วนหัว="ภายใน">
+           <a id="forkme_banner" href="https://github.com/octocat">View บน GitHub</a>
+ 
+- <h1 id="project_title">Octocat.github.io</h1>
+- <h2 id="project_tagline"></h2>
++ <h1 id="project_title">ยินดีต้อนรับสู่หน้าแรกของ Octocat!</h1>
++ <h2 id="project_tagline">อย่าลืมคํานึงถึงหน้านี้เพื่อดูการอัปเดตล่าสุดทั้งหมดของฉัน</h2>
+ 
+         </ส่วนหัว>
+     </div>
