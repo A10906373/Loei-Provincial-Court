@@ -318,3 +318,17 @@ THAC-SEO-FEB-C04-2_1200x628.jpg
 สถาบันอนุญาโตตุลาการ (Thailand Arbitration Center) หรือ THAC เป็นสถาบันฯ ที่ให้บริการด้านการอนุญาโตตุลาการ และการประนอมข้อพิพาทในระดับสากล ดำเนินการตั้งแต่ พ.ศ. 2558 โดยมีวัตถุประสงค์เพื่อสนับสนุนและส่งเสริมระบบอนุญาโตตุลาการระหว่างประเทศ และให้บริการด้านอนุญาโตตุลาการที่มีความเป็นอิสระและมีมาตรฐานสากล ด้วยประสบการณ์และความชำนาญทางวิชาชีพ จึงทำให้มั่นใจได้ว่าผู้มาใช้บริการจะได้รับบริการที่ถูกต้องรวดเร็ว อีกทั้ง THAC ตั้งอยู่ในพื้นที่ที่เข้าถึงง่าย สะดวก  และมีอัตราค่าบริการที่ต่ำกว่า ช่วยให้ประหยัดทั้งเวลาและค่าใช้จ่าย
 
 สนใจติดต่อ THAC ได้ทาง
+<img width="719" height="1041" alt="164" src="https://github.com/user-attachments/assets/9d5e6544-e05f-4901-8ad5-4a0a3dbabc3e" />
+<img width="720" height="1012" alt="922" src="https://github.com/user-attachments/assets/95b3af85-7fc4-4ded-83de-d1d84e4f25e8" />
+<img width="720" height="1008" alt="921" src="https://github.com/user-attachments/assets/8afd4cc0-7d2b-465f-acf2-e86813d35f72" />
+<img width="715" height="1070" alt="5317" src="https://github.com/user-attachments/assets/c62dce8f-6d99-41dc-a914-960bfe2abfb3" />
+<img width="715" height="1075" alt="5316" src="https://github.com/user-attachments/assets/aaceb5a4-402a-4db1-9ed1-3ebb8b530336" />
+<img width="448" height="688" alt="5303" src="https://github.com/user-attachments/assets/9296988c-aca9-4470-8d57-e5367c9fa503" />
+<img width="572" height="802" alt="5309" src="https://github.com/user-attachments/assets/1a923d5d-697e-415b-80a2-c6c82e7dd4c9" />
+<img width="572" height="799" alt="5308" src="https://github.com/user-attachments/assets/7b9763b5-4ab4-4128-8535-adbd0342c9fb" />
+<img width="572" height="795" alt="5307" src="https://github.com/user-attachments/assets/ba50f209-6af8-48dc-b154-9755792588d9" />
+<img width="572" height="802" alt="5306" src="https://github.com/user-attachments/assets/6426f020-41ed-4e0c-bf58-2e74e692615c" />
+<img width="572" height="794" alt="5305" src="https://github.com/user-attachments/assets/035409d3-21dc-4185-9f45-512cc1cadc4a" />
+<img width="572" height="805" alt="5304" src="https://github.com/user-attachments/assets/c85aedf6-2efd-4e67-aca5-24f8fd0bce2b" />
+<img width="526" height="816" alt="9746" src="https://github.com/user-attachments/assets/b44a2421-6af7-4049-b211-3e4a16bd139e" />
+<img width="546" height="781" alt="9748" src="https://github.com/user-attachments/assets/dfedaf29-b59a-4d5d-9a20-75cde7db748f" />
