@@ -1,0 +1,166 @@
+{{Navigation Data Platform}}
+
+This page provides links to data documentation for private and public Wikimedia data sources. Its primary audience is WMF data analysts, product teams, and researchers who have an official non-disclosure agreement with the Wikimedia Foundation. 
+* Private data requires [[Data_Platform/Data access#Production access|production data access]]. It includes datasets in WMF's [[Data_Platform/Data_Lake|Data Lake]]: a large, analytics-oriented repository of data about Wikimedia projects.
+* A selection of public data sources are linked here, but public Wikimedia data is described more fully at [[meta:Research:Data]].
+
+== Traffic data ==
+
+Analytics data about wiki pageviews and site usage.  
+
+{{ContentGrid
+|content=
+{{Colored box
+|title = Private traffic data
+|content = Most Data Lake traffic datasets are updated at hourly granularity, with 2-3 hours lag behind real-time. This data includes:
+* [[Data_Platform/Data Lake/Traffic/Webrequest|Webrequests]]
+* [[Data_Platform/Data Lake/Traffic/Pageviews|Pageviews]]
+* [[Data_Platform/Data Lake/Traffic/Unique Devices|Unique devices]]
+Full dataset list at [[Data_Platform/Data_Lake/Traffic | Data Lake/Traffic]].
+
+[[File:Datahublogo.png|30x30px|link=https://datahub.wikimedia.org/search?filter__entityType___false___EQUAL___1=DATASET&filter_tags___false___EQUAL___0=urn%3Ali%3Atag%3Atraffic&page=1&query=&unionType=0|alt="DataHub logo"]] 
+[https://datahub.wikimedia.org/search?filter__entityType___false___EQUAL___1=DATASET&filter_tags___false___EQUAL___0=urn%3Ali%3Atag%3Atraffic&page=1&query=&unionType=0 View datasets tagged with "traffic" in DataHub] (requires a [[mw:Developer_account|developer account]])
+}}
+{{Colored box
+|title = Public traffic data
+|content =
+APIs:
+* [[wmdoc:analytics-api|Wikimedia Analytics API]] (page views, unique devices, media requests, and more)
+Specialized datasets:
+* [[meta:Differential_privacy/Completed/Country-project-page|Differentially private pageviews]]
+[[meta:Data_dumps|Dumps]]:
+* [https://dumps.wikimedia.org/other/pageview_complete/readme.html Pageview hourly & daily]
+* [https://archive.org/search?query=subject%3A%22d0cmf%22 Daily pageviews]  (d0cmf, records grouped by local wikis)
+* [https://dumps.wikimedia.org/other/mediacounts/readme.html Mediacounts]
+* [https://dumps.wikimedia.org/other/clickstream/readme.html Clickstream]
+Dashboards:
+* [https://analytics.wikimedia.org/dashboards/browsers/#all-sites-by-os Browser statistics]
+* [https://analytics.wikimedia.org/dashboards/vital-signs/ Readers:Pageviews and Unique Devices]
+* [https://stats.wikimedia.org Wikistats]
+* [https://pageviews.wmcloud.org Pageviews tool]
+* [https://wikinav.toolforge.org/ WikiNav]
+}}
+}}
+
+== Content data ==
+
+Datasets that contain full content of revisions for Wikimedia wikis.
+
+{{ContentGrid
+|content=
+{{Colored box
+|title = Private content data
+|content = 
+* [[Data Platform/Data Lake/Content/Mediawiki content history v1|mediawiki_content_history_v1]]: full content of all revisions, past and present, from all wikis 
+* [[Data Platform/Data Lake/Content/Mediawiki content current v1|mediawiki content current v1]]: full content of the latest revisions of all pages on all wikis
+* [[Data_Platform/Data Lake/Content/Wikidata entity|wikidata_entity]]: Wikidata's latest content in structured form
+* [[Data_Platform/Data Lake/Content/Wikidata item page link|wikidata_item_page_link]]: links between Wikidata items and corresponding Wikipedia pages in various languages
+
+{{Remark|You can [[Wiki_Replicas|access MediaWiki replica databases through Wikimedia Cloud Services]].|reminder}}
+
+}}
+{{Colored box
+|title = Public content data
+|content = 
+APIs:
+* [[mw:Special:MyLanguage/API:Revisions|Revisions]]
+* [[mw:Special:MyLanguage/API:Parse|Parse]]
+* [[wikidata:Wikidata:REST_API|Wikidata:REST_API]]
+{{Remark|Code running on Data Platform servers such as the [[Data Platform/Systems/Stat hosts|stat hosts]] should [[Data Platform/Internal API requests|use the internal API URLs]] in place of the public URLs.|reminder}}
+[[meta:Data_dumps|Dumps]]:
+* [https://dumps.wikimedia.org/backup-index.html Wikitext] (use [https://pypi.org/project/mwparserfromhell/ mwparserfromhell])
+* [https://dumps.wikimedia.org/other/enterprise_html/ HTML] (use [https://pypi.org/project/mwparserfromhtml/ mwparserfromhtml])
+* [https://dumps.wikimedia.org/other/wikibase/commonswiki/ Structured data (image depicts)]
+Specialized datasets:
+* [[meta:Research:Knowledge_Gaps_Index/Datasets|Content Gaps]]
+MediaWiki [[mw:Special:MyLanguage/Manual:Database_layout|database tables]]:
+* [[mw:Special:MyLanguage/Manual:Text_table|Text]]
+}}
+}}
+
+== Contributing and edits data ==
+
+Data about wiki revisions, pages, and users. Includes data about editors and their characteristics. 
+
+{{ContentGrid
+|content=
+{{Colored box
+|title = Private edits data
+|content = Edits datasets are generated as monthly snapshots, not continuously updated. This data includes:
+* [[Data_Platform/Data_Lake/Edits/MediaWiki_history |MediaWiki_history]]: Fully denormalized dataset with user, page and revision data
+* [[Data_Platform/Data_Lake/Edits#Raw_Mediawiki_data| Raw, unprocessed copies of MediaWiki database tables]], bundled to facilitate cross-wiki queries.
+Full dataset list at [[Data_Platform/Data_Lake/Edits | Data Lake/Edits]].
+}}
+{{Colored box
+|title = Private contributors data
+|content = Private datasets about contributors or editors includes:
+* [[Data_Platform/Data_Lake/Edits/Geoeditors|Geoeditors]]: Counts of editors by project by country 
+
+[[File:Datahublogo.png|30x30px|link=https://datahub.wikimedia.org/search?filter__entityType___false___EQUAL___0=DATASET&filter_tags___false___EQUAL___1=urn%3Ali%3Atag%3Aeditors&page=1&query=&unionType=0|alt="DataHub logo"]] [https://datahub.wikimedia.org/search?filter__entityType___false___EQUAL___0=DATASET&filter_tags___false___EQUAL___1=urn%3Ali%3Atag%3Aeditors&page=1&query=&unionType=0 View datasets tagged with "editors" in DataHub] (requires a [[mw:Developer_account|developer account)]])
+}}
+{{Colored box
+|title = Public edits data
+|content = 
+APIs:
+* [https://www.mediawiki.org/w/api.php?action=help&modules=query%2Brevisions Revisions]
+* [https://www.mediawiki.org/w/api.php?action=help&modules=query%2Ballrevisions Allrevisions]
+* [https://stream.wikimedia.org/?doc#/streams MediaWiki Event Streams]
+{{Remark|Code running on Data Platform servers such as the [[Data Platform/Systems/Stat hosts|stat hosts]] should [[Data Platform/Internal API requests|use the internal API URLs]] in place of the public URLs.|reminder}}
+[[meta:Data_dumps|Dumps]]:
+* [https://dumps.wikimedia.org/other/mediawiki_history/readme.html Mediawiki_history]
+MediaWiki [[mw:Special:MyLanguage/Manual:Database_layout|database tables]]:
+*[[mw:Special:MyLanguage/Manual:Revision_table | Revision table]]
+Dashboards:
+* [https://stats.wikimedia.org/ Wikistats]
+* [https://xtools.wmcloud.org/ XTools]
+}}
+{{Colored box
+|title = Public contributors data
+|content =
+APIs:
+* [https://wikimedia.org/api/rest_v1/#/Editors%20data Geoeditors]
+* [https://www.mediawiki.org/w/api.php?action=help&modules=query%2Busers users]
+* [https://www.mediawiki.org/w/api.php?action=help&modules=query%2Busercontribs usercontribs]
+* [https://www.mediawiki.org/w/api.php?action=help&modules=query%2Bglobaluserinfo globaluserinfo]
+[[meta:Data_dumps|Dumps]]:
+* [https://dumps.wikimedia.org/other/mediawiki_history/readme.html Mediawiki_history]
+* [https://dumps.wikimedia.org/other/geoeditors/readme.html Geoeditors]
+Specialized datasets:
+* [[meta:Differential_privacy/Completed/Geoeditors|Differentially private geoeditors (hourly/monthly)]]
+MediaWiki [[mw:Special:MyLanguage/Manual:Database_layout|database tables]]:
+* [[mw:Special:MyLanguage/Manual:Actor_table | actor]]
+* [[mw:Special:MyLanguage/Manual:User_table |user]]
+* [[mw:Special:MyLanguage/Manual:User_groups_table |user_groups]]
+* [[mw:Special:MyLanguage/Manual:User_properties_table|user_properties]]
+Dashboards:
+* [https://stats.wikimedia.org/ Wikistats]
+* [https://xtools.wmcloud.org/ XTools]
+* [https://development-metrics.wmcloud.org/ Development metrics (was Bitergia)]
+}}
+}}
+
+== Instrumentation and events data ==
+{{Colored box
+|title = View and query events data
+|content = Through the [[Event Platform]] and [[Metrics Platform]], you can create and deploy your own instruments to collect event data. 
+
+Events are [[Data Engineering/Systems/Hadoop Event Ingestion Lifecycle|ingested]] into <code>event</code> and <code>event_sanitized</code> databases in the [[Data_Platform/Data Lake|Data Lake]].
+* The Hive table name is a normalized version of the stream name.
+* The <code>event</code>database stores original (unsanitized) events within a 90 day retention period.
+* The <code>event_sanitized</code> database is an archive of sanitized events, beyond the 90 day retention period.
+** [[Data_Platform/Systems/Event Sanitization|Sanitized event data]] is processed per WMF’s [[foundation:Privacy_policy|Privacy Policy]] and [[metawiki:Data_retention_guidelines|Data Retention Guidelines]].
+
+After the data becomes available, you can [[Data_Platform/Analyze_data|access it with standard query tools]] and [[Data_Platform/Transform_data#Share_data_and_dashboards|create dashboards based on the data]].
+See the [[Event_Platform/Instrumentation_How_To#Viewing_and_querying_events|Instrumentation tutorial]] for how to consume events directly from [[Kafka]] or through the internal [[EventStreams]] instance. 
+}}
+
+== How to query private data ==
+
+Visit [[Data_Platform/Analyze_data | Analyze data]] to learn how to run queries and generate visualizations using WMF private datasets and analysis tools.
+
+== Report data issues ==
+
+[[Data_Platform/Data_Lake/Data_Issues|Data Issue reports]]
+
+[[Category:Landing page]]
+[[Category:Data platform]]
